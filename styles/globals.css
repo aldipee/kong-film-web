@@ -42,7 +42,7 @@ a {
 }
 .movie-title {
   font-size: 14px !important;
-  color: #fff;
-  /* color: #4d4d4d; */
+  /* color: #fff; */
+  color: #4d4d4d;
   transition: 0.3s all;
 }

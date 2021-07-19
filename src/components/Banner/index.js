@@ -20,8 +20,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "2px",
   },
   heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing(3, 0, 6),
+    margin: theme.spacing(0, 0, 27),
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -46,7 +47,7 @@ export default function HeroBanner() {
   const classes = useStyles();
   return (
     <div className={classes.heroContent}>
-      <Container maxWidth="sm">
+      <Container maxWidth="sm" mb={10}>
         <Typography
           className={classes.tagline}
           component="h1"
