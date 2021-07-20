@@ -5,9 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import SearchBox from '../Search';
 const useStyles = makeStyles((theme) => ({
   heroContent: {
-    backgroundColor: theme.palette.background.default,
     padding: theme.spacing(3, 0, 6),
-    margin: theme.spacing(0, 0, 27),
+    margin: theme.spacing(0, 0, 0),
+    height: theme.spacing(60),
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -26,15 +26,8 @@ export default function HeroBanner() {
   const classes = useStyles();
   return (
     <div className={classes.heroContent}>
-      <Container maxWidth='sm' mb={10}>
-        <Typography
-          className={classes.tagline}
-          component='h1'
-          variant='h2'
-          align='center'
-          color='textPrimary'
-          gutterBottom
-        >
+      <Container maxWidth='sm' my={10}>
+        <Typography className={classes.tagline} component='h1' variant='h2' align='center' gutterBottom>
           IndoXXI Premiere
         </Typography>
         <Typography className={classes.tagline} component='h1' variant='h5' align='center' gutterBottom>
