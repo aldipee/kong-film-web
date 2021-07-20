@@ -86,6 +86,10 @@ a {
   border-bottom-style: solid;
   border-bottom-width: 0px;
 }
+.blurred {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
 
 .menu-box-item:hover .menu-box-title {
   color: gold;
@@ -100,4 +104,11 @@ a {
   box-shadow: 2px ​1px 18px 1px #ab760c;
   border-color: #121212;
   margin-bottom: 3px;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  /* padding: 50px; */
 }

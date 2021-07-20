@@ -1,15 +1,15 @@
-import '../styles/globals.css';
-import { createTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
+import "../styles/globals.css";
+import { createTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 
 const theme = createTheme({
   overrides: {
-    themeColor: '#141414',
-    menuColor: '#e8e8e8',
+    themeColor: "#121212",
+    menuColor: "#e8e8e8",
   },
   palette: {
     primary: {
-      main: '#fff',
+      main: "#fff",
     },
   },
 });
