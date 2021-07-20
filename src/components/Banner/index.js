@@ -1,8 +1,37 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
+import { Container, Typography, Grid } from "@material-ui/core";
+import StarBorderIcon from "@material-ui/icons/StarBorder";
+import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import FolderSpecialOutlinedIcon from "@material-ui/icons/FolderSpecialOutlined";
+import TheatersOutlinedIcon from "@material-ui/icons/TheatersOutlined";
+import VideoLibraryOutlinedIcon from "@material-ui/icons/VideoLibraryOutlined";
 import SearchBox from "../Search";
+import MenuItemBox from "../MenuItemBox";
+
+const menuItems = [
+  {
+    title: "Featured",
+    icon: <PlayCircleOutlineIcon style={{ fontSize: 30, color: "gold" }} />,
+  },
+  {
+    title: "Popular",
+    icon: <StarBorderIcon style={{ fontSize: 30, color: "gold" }} />,
+  },
+  {
+    title: "Terbaru",
+    icon: <TheatersOutlinedIcon style={{ fontSize: 30, color: "gold" }} />,
+  },
+  {
+    title: "Terbaik",
+    icon: <FolderSpecialOutlinedIcon style={{ fontSize: 30, color: "gold" }} />,
+  },
+  {
+    title: "Series",
+    icon: <VideoLibraryOutlinedIcon style={{ fontSize: 30, color: "gold" }} />,
+  },
+];
+
 const useStyles = makeStyles((theme) => ({
   heroContent: {
     padding: theme.spacing(3, 0, 6),
@@ -24,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
     color: "gold",
     // color: "#fbc02d",
   },
+  menuItemContainer: {
+    marginTop: 20,
+  },
 }));
 
 export default function HeroBanner() {
@@ -43,7 +75,12 @@ export default function HeroBanner() {
             menyediakan film, serial, terupdate setiap harinya.
           </Typography>
           <SearchBox />
+          {/* <MenuBox /> */}
         </Container>
+        <Grid container spacing={2} className={classes.menuItemContainer} justifyContent="center">
+          {menuItems.length &&
+            menuItems.map((item) => <MenuItemBox key={item.title} title={item.title} iconComponent={item.icon} />)}
+        </Grid>
       </div>
     </>
   );
